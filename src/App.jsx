@@ -49,25 +49,25 @@ function App() {
 
   return (
     <div className="h-full pt-10">
-        <div className="flex flex-col items-center">
-          <h1 className="text-white text-7xl font-bold font-mono text-center mb-20">TODO list</h1>
+        <div className="flex flex-col items-center mx-2 xl:w-3xl xl:mx-auto">
+          <h1 className="text-white text-5xl xl:text-7xl font-bold font-mono text-center mb-20">TODO list</h1>
           <form onSubmit={handleSubmit} className="flex xl:w-3xl">
             <input type="text" id="title" name="title" className="border w-full p-3 bg-zinc-300 outline-0 rounded-lg text-2xl"/>
             <button className="p-3 border-0 text-2xl rounded-lg xl:ml-4 cursor-pointer font-bold bg-green-500 text-zinc-100">Qo'shish</button>
           </form>
 
-          <div className="text-slate-900">
-            <ul className="sm:w-auto xl:w-3xl mt-8">
+          <div className="text-slate-900 w-full">
+            <ul className="w-full mt-8">
               {todos.map(({title, hours, minut,day, month, year, id}, index) => {
-                  return<li className="flex justify-between items-center bg-zinc-300 mt-4 h-14 px-2 rounded-lg">
+                  return<li className="flex justify-between items-center bg-zinc-300 mt-4 w-full h-14 px-2 rounded-lg overflow-auto">
                       
-                      <h1 className="font-semibold text-2xl">{`${index +1}. ${title}`}</h1>
-                      <div className="h-full flex items-center gap-16">
-                        <div className="flex gap-x-3 h-full items-end opacity-50">
+                      <h1 className="font-semibold text-lg xl:text-2xl">{`${index +1}. ${title}`}</h1>
+                      <div className="h-full flex items-center gap-4 xl:gap-16">
+                        <div className="flex gap-x-2 xl:gap-x-2 h-full items-end opacity-50">
                           <span>{`${hours}:${minut}`}</span>
                           <span>{`${day}.${month}.${year}`}</span>
                         </div>
-                         <div className="flex items-center gap-x-4 ">
+                         <div className="flex items-center gap-x-2 xl:gap-x-4">
                          <FaPen onClick={() => editItem(id)} className=" cursor-pointer"/>
                           <MdDelete onClick={() => remoteitem(id)} className=" cursor-pointer rounded-full text-3xl"/>
                          </div>
