@@ -52,12 +52,12 @@ function App() {
         <div>
           <h1 className="text-white text-7xl font-bold font-mono text-center mb-20">TODO list</h1>
           <form onSubmit={handleSubmit}>
-            <input type="text" id="title" name="title" className="border w-3xl p-3 bg-zinc-300 outline-0 rounded-lg text-2xl"/>
+            <input type="text" id="title" name="title" className="border sm:w-auto xl:w-3xl p-3 bg-zinc-300 outline-0 rounded-lg text-2xl"/>
             <button className="p-3 border-0 text-2xl rounded-lg ml-4 cursor-pointer font-bold bg-green-500 text-zinc-100">Qo'shish</button>
           </form>
 
           <div className="text-slate-900">
-            <ul className="w-3xl mt-8">
+            <ul className="sm:w-auto xl:w-3xl mt-8">
               {todos.map(({title, hours, minut,day, month, year, id}, index) => {
                   return<li className="flex justify-between items-center bg-zinc-300 mt-4 h-14 px-2 rounded-lg">
                       
