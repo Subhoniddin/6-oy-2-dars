@@ -48,12 +48,12 @@ function App() {
   }
 
   return (
-    <div className="h-full flex justify-center pt-10">
-        <div>
+    <div className="h-full pt-10">
+        <div className="flex flex-col items-center">
           <h1 className="text-white text-7xl font-bold font-mono text-center mb-20">TODO list</h1>
-          <form onSubmit={handleSubmit}>
-            <input type="text" id="title" name="title" className="border sm:w-auto xl:w-3xl p-3 bg-zinc-300 outline-0 rounded-lg text-2xl"/>
-            <button className="p-3 border-0 text-2xl rounded-lg ml-4 cursor-pointer font-bold bg-green-500 text-zinc-100">Qo'shish</button>
+          <form onSubmit={handleSubmit} className="flex xl:w-3xl">
+            <input type="text" id="title" name="title" className="border w-full p-3 bg-zinc-300 outline-0 rounded-lg text-2xl"/>
+            <button className="p-3 border-0 text-2xl rounded-lg xl:ml-4 cursor-pointer font-bold bg-green-500 text-zinc-100">Qo'shish</button>
           </form>
 
           <div className="text-slate-900">
